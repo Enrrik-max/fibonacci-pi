@@ -1,0 +1,20 @@
+import math
+
+def suma_fibonacci_por_pi(n):
+    a, b = 0, 1
+    suma = 0.0
+
+    print(f"{'Índice':<8}{'Fibonacci':<12}{'× π':<5}{'Resultado':<20}")
+    print("-" * 50)
+
+    for i in range(n):
+        resultado = a * math.pi
+        suma += resultado
+
+        print(f"{i:<8}{a:<12}π   {resultado:<20.5f}")
+        a, b = b, a + b
+
+    print(f"\nSuma total de los primeros {n} términos: {suma:.5f}")
+
+# Ejemplo de uso:
+suma_fibonacci_por_pi(10)
